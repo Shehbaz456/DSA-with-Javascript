@@ -1,9 +1,8 @@
 
 // function binarysearch(arr,key) {    
 //     let start = 0;
-//     let end = arr.length - 1;
-    
-//     while(start<=end){
+//     let end = arr.length;
+//     while(start < end){
 //         // let mid = Math.floor((start + end)/2)
 //         let mid = Math.floor(start + (end - start)/2)
 //         if(arr[mid]===key){
@@ -76,56 +75,56 @@
 
 
 
-function firstOcc(arr, key) {
-  let start = 0;
-  let end = arr.length - 1;
-  let ans = -1;
+// function firstOcc(arr, key) {
+//   let start = 0;
+//   let end = arr.length - 1;
+//   let ans = -1;
 
-  while (start <= end) {
-    let mid = Math.floor(start + (end - start) / 2);
+//   while (start <= end) {
+//     let mid = Math.floor(start + (end - start) / 2);
 
-    if (key === arr[mid]) {
-      ans = mid;
-      end = mid - 1; // continue searching left side
-    } else if (key > arr[mid]) {
-      start = mid + 1;
-    } else {
-      end = mid - 1;
-    }
-  }
-  return ans; // return index only
-}
+//     if (key === arr[mid]) {
+//       ans = mid;
+//       end = mid - 1; // continue searching left side
+//     } else if (key > arr[mid]) {
+//       start = mid + 1;
+//     } else {
+//       end = mid - 1;
+//     }
+//   }
+//   return ans; // return index only
+// }
 
-function lastOcc(arr, key) {
-  let start = 0;
-  let end = arr.length - 1;
-  let ans = -1;
+// function lastOcc(arr, key) {
+//   let start = 0;
+//   let end = arr.length - 1;
+//   let ans = -1;
 
-  while (start <= end) {
-    let mid = Math.floor(start + (end - start) / 2);
+//   while (start <= end) {
+//     let mid = Math.floor(start + (end - start) / 2);
 
-    if (key === arr[mid]) {
-      ans = mid;
-      start = mid + 1; // continue searching right side
-    } else if (key > arr[mid]) {
-      start = mid + 1;
-    } else {
-      end = mid - 1;
-    }
-  }
-  return ans; // return index only
-}
+//     if (key === arr[mid]) {
+//       ans = mid;
+//       start = mid + 1; // continue searching right side
+//     } else if (key > arr[mid]) {
+//       start = mid + 1;
+//     } else {
+//       end = mid - 1;
+//     }
+//   }
+//   return ans; // return index only
+// }
 
-// ✅ Main
-let arr = [1, 2, 3, 3, 3, 3, 4, 5];
-let key = 3;
+// // ✅ Main
+// let arr = [1, 2, 3, 3, 3, 3, 4, 5];
+// let key = 3;
 
-let first = firstOcc(arr, key);
-let last = lastOcc(arr, key);
+// let first = firstOcc(arr, key);
+// let last = lastOcc(arr, key);
 
-if (first !== -1 && last !== -1) {
-  let total = (last - first) + 1;
-  console.log(`Total number of occurrences of ${key}: ${total}`);
-} else {
-  console.log(`Element ${key} not found`);
-}
+// if (first !== -1 && last !== -1) {
+//   let total = (last - first) + 1;
+//   console.log(`Total number of occurrences of ${key}: ${total}`);
+// } else {
+//   console.log(`Element ${key} not found`);
+// }
