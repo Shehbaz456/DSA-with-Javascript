@@ -754,3 +754,179 @@ else console.log("this is not a plaindrome");
 
 
 
+// function mostfrequent(s) {
+//     let charCount = {};
+//     for (const ch of s) {
+//         charCount[ch] = (charCount[ch] || 0) + 1;
+//     }
+//     let maxChar = '';
+//     let maxCount = 0;
+//     for (const [ch,count] of Object.entries(charCount)) {
+//         if(count>maxCount || (maxCount===count && (maxChar === '' || ch < maxChar))){
+//             maxCount=count;
+//             maxChar = ch;
+//         }   
+//     }  
+//     return maxChar;
+// }
+
+// const s1 = "testsample";  // e
+// const s2 = "output";     //  t
+
+// console.log(mostfrequent(s1)); 
+// console.log(mostfrequent(s2)); 
+
+
+
+// function countSubstring(str,sub) {
+//     console.log(str.slice(1));
+    
+//     const count = str.split(sub).length - 1;
+//     return count;
+// }
+// let str = "shehbaz sho meokshooo"
+// let sub = "sh"
+// console.log(countSubstring(str,sub));
+
+
+
+// capitilize each word
+// let str = "I love my india";
+// function capitalizedword(str) {
+//    let pp = str.split(" ").map((word)=> word[0].toUpperCase() + word.slice(1) ).join(" ");
+//    return pp;
+// }
+// console.log(capitalizedword(str));
+
+
+
+// check anagram
+
+// function checkAnagram(str1,str2) {
+//    str1 = str1.toLowerCase();
+//     str2 = str2.toLowerCase();
+//     if(str1.length !== str2.length){
+//         return false
+//     }
+//     let seen = {};
+//     for (const ch of str1) {
+//         seen[ch] = (seen[ch] || 0) + 1;
+//     }
+//     for (const ch of str2) {
+//         if(!seen[ch]) return false;
+//         seen[ch]--;
+//     }
+//     return true;
+// }
+
+// let str1 ="madula"
+// let str2 ="Dulama"
+// if(checkAnagram(str1,str2) ){
+//     console.log("this is an anagram");
+// }else{
+//     console.log("this is Not an anagram");
+// }
+
+// console.log(checkAnagram(str1,str2));
+
+
+// longest word from string
+// function logwordlength(str) {
+//     let logest_word = '';
+//     let maxlen = 0
+//     let arr = str.split(" ");
+//     console.log(arr);
+    
+//     for (const word of arr) {
+//         if(word.length > maxlen ){
+//             maxlen = word.length;
+//             logest_word = word;
+//         }
+//     }
+//     console.log(maxlen);
+//     return logest_word;
+// }
+
+// let str = "Be Best engineer"
+// console.log(logwordlength(str));
+
+
+// function logwordlength(str) {
+//   return str
+//     .split(" ")
+//     .reduce((longest, word) => word.length > longest.length ? word : longest, "");
+// }
+// let str = "Be Best engineer";
+// console.log(logwordlength(str)); // "engineer"
+
+
+
+// Reverse words in a sentence: Reverse the order of words in a sentence while 
+// preserving the order of letters within each word. 
+
+// let str = "hello sir good morning";
+
+// function reverseString(str) {
+//     // let arr = str.split(" ");
+//     // let newstr = '';
+//     // for (const word of arr) {
+//     //     newstr += word.split("").reverse().join("");
+//     //     newstr +=" "
+//     // }
+//     // return newstr.trim();
+
+//     let words = []
+//     let current=""
+//     for (const ch of str) {
+//         if(ch !== " "){
+//             current +=ch
+//         }else{
+//             words.push(current);
+//             current=""
+//         }
+//     }
+//     // push last word 
+//     if(current) words.push(current);
+
+//     let reversedSentence = "";
+//     for (let i = words.length - 1; i >= 0 ; i--) {
+//         reversedSentence += words[i]
+//         if (i !== 0) reversedSentence += " ";
+//     }
+
+//     return reversedSentence;
+// }
+// console.log(reverseString(str));
+
+
+
+
+
+let str = "hello sir good morning";
+function reverseString(str) {
+    let words = []
+    let current=""
+    for (const ch of str) {
+        if(ch !== " "){
+            current +=ch
+        }else{
+            words.push(current);
+            current=""
+        }
+    }
+    // push last word 
+    if(current) words.push(current);
+
+    let reversedSentence = "";
+    for (let i = words.length - 1; i >= 0 ; i--) {
+        let revWord = "";
+        for (let j = words[i].length - 1; j >= 0; j--) {
+        revWord += words[i][j];
+        }
+        reversedSentence += revWord;
+        if (i !== 0) reversedSentence += " ";
+    }
+    return reversedSentence;
+}
+console.log(reverseString(str));
+
