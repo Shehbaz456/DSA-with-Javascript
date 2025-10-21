@@ -1013,3 +1013,50 @@
 // const b = a++ + ++a;
 // console.log(b);
 
+
+
+// pair sum 
+// Given an array arr[] of integers and another integer target. Determine if there exist two distinct indices such that the sum of their elements is equal to the target.
+
+// Examples:
+
+// Output: true
+// Explanation: arr[3] + arr[4] = -3 + 1 = -2
+// Input: arr[] = [1, -2, 1, 0, 5], target = 0
+// Output: false
+// Explanation: None of the pair makes a sum of 0
+// Input: arr[] = [11], target = 11
+// Output: false
+// Explanation: No pair is possible as only one element is present in arr[]
+
+
+function Pairsum(arr,target) {
+    if (arr.length===1) {
+        return false
+    }
+    let seen ={};
+    for (const elem of arr) {
+        let complement = target - (elem);
+        if(seen[complement]){
+            return true;
+        }
+        seen[elem]=true;
+    }
+    return false;
+
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = i + 1; j < arr.length; j++) {
+    //         if(arr[i] + arr[j] === target){
+    //             return true;
+    //         }
+    //     }
+    // }
+    // return false;
+}
+
+// let arr = [0, -1, 2, -3, 1], target = -2;
+// let arr= [11], target = 11;
+let arr = [1, -2, 1, 0, 5], target = 0;
+
+console.log(Pairsum(arr,target));
