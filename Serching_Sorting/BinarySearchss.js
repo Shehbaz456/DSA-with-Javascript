@@ -28,8 +28,6 @@
 
 // find first and last positon in a shorted array elements.
 
-
-
 // function firstOcc(arr,key) {
 //     let start = 0;
 //     let end = arr.length - 1;
@@ -70,9 +68,6 @@
 // let arr = [1,2,3,3,3,3,4,5];
 // console.log(firstOcc(arr,3));
 // console.log(lastOcc(arr,3));
-
-
-
 
 
 // function firstOcc(arr, key) {
@@ -128,3 +123,26 @@
 // } else {
 //   console.log(`Element ${key} not found`);
 // }
+
+
+
+// Binary Search using Recursion
+function binarySearch(arr,s,e,key) {    
+    if (s>e) {
+        return -1;
+    }
+    let mid = Math.floor(s + (e-s)/2);
+
+    if(key===arr[mid]) return mid;
+
+    if (key>arr[mid])  return binarySearch(arr,mid+1,e,key)
+    else  return binarySearch(arr,s,mid-1,key)
+    
+}
+let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,15,17,18,19,20,21,44,66,77,88,99,100];
+let s = 0;
+let e = arr.length;
+let key = 100;
+console.log(binarySearch(arr,s,e,key));
+
+
