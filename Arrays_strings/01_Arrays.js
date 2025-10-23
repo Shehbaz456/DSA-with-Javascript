@@ -1,4 +1,4 @@
-// sort array.
+// ==================  Question Array DSA IMP   ========================
 
 // let arr = [1,62,13,4,45,6];
 // function bubbleSort(arr) {
@@ -249,7 +249,7 @@
 // let arr = [24, 23, 55, 66, 35, 84, 90, 8, 12];
 // findPairSorted(arr, 90);
 
-// more efficient way for finding pair sum of an array
+// =========== more efficient way for finding pair sum of an array ==========================
 
 // function pairSum(arr,trg){
 //     let seen = {};
@@ -274,7 +274,7 @@
 //   complement = trg - elem;
 // { 24:0,23:1, }
 
-//   -----------  Flat nested array  --------------------
+//  ====================  Flat nested array  ==========================
 
 // function flattenArray(arr) {
 //     let result = [];
@@ -366,7 +366,7 @@
 
 // console.log(flattenArray(arr));
 
-// // Q sort  0 and 1 in an array
+// ====================== Q sort  0 and 1 in an array  =========================
 // let arr = [0,1,0,1,1,0];
 // function sort01(arr) {
 //     let i=0;
@@ -388,7 +388,9 @@
 // }
 // console.log(sort01(arr));
 
-// // Q: Sort 0, 1, and 2 in an array (Dutch National Flag Problem)
+
+//================ Q: Sort 0, 1, and 2 in an array (Dutch National Flag Problem) ========================
+
 // let arr = [0, 2, 2, 1, 0, 1, 1, 0, 2];
 
 // function sort012(arr) {
@@ -410,7 +412,8 @@
 
 // console.log(sort012(arr)); // Output: [0, 0, 0, 1, 1, 1, 2, 2, 2]
 
-// // Q: Sort 0, 1, and 2 in an array (Dutch National Flag Problem)
+//================= Q: Sort 0, 1, and 2 in an array (Dutch National Flag Problem) ===============
+
 // let arr = [0, 2, 2, 1, 0, 1, 1, 0, 2];
 
 // function sort012(arr) {
@@ -434,7 +437,7 @@
 
 // let arr =[1,0,0,1,1,0,1,1,1,0,1]
 
-// Reverse alernate elem Order of an array
+// ================ Reverse alernate elem Order of an array ===============================
 // let arr = [1,22,4,14,86,26,11]
 // function reverseOrder(arr) {
 //     let i=0 ;
@@ -476,6 +479,7 @@
 
 
 
+// ==================== Check Array Element ==================================
 // let arr = [1, 2, 3, 0, 0, 0];
 // let m = 3;
 // let arr1 = [2, 4, 5];
@@ -521,7 +525,7 @@
 
 
 
-
+// ================== MargeSortArr ===================================
 // let arr = [1,3,5,7,9];
 // let m = 5
 // let arr1 = [2,4,6];
@@ -555,7 +559,7 @@
 
 
 
-// Move Zero to right
+// ======================= Move Zero to right ====================================
 
 // let arr =[0,1,0,3,12];
 // function moveZero(arr) {
@@ -575,10 +579,10 @@
 // console.log(moveZero(arr));
 
 
-// Move Zero to right without creating newarr or copying it.
+// ================== Move Zero to right without creating newarr or copying it. ================
 
 
-
+// way 2
 // let arr =[0,1,0,3,12];
 // function moveZero(arr) {
 //     let index = 0;
@@ -617,7 +621,8 @@
 
 
 
-// // Rotate Array 
+// =================== Rotate Array with k =========================
+
 // function rotateArray(arr, k) {
 //   let temp=[]
 //   for (let i = 0; i < arr.length; i++) {
@@ -634,7 +639,7 @@
 // console.log(rotateArray(arr, k)); 
 
 
-// sum even index and subtract odd index.
+//=============== sum even index and subtract odd index. ==========================
 
 // let nums = [1,3,5,7];
 // function alternatingSum(nums) {
@@ -656,7 +661,7 @@
 
 
 
-// Marge sort Array with copy 
+// ================= Marge sort Array with copy =================================
 
 // let nums1 = [1,2,3,0,0,0];
 // let m = 3
@@ -695,7 +700,7 @@
 
 
 
-// 1752. Check if Array Is Sorted and Rotated
+//=========== 1752. Check if Array Is Sorted and Rotated ========================
 
 // Input: nums = [3,4,5,1,2]
 // Output: true
@@ -741,6 +746,7 @@
 
 
 
+// ==================== Sum of two array  ============================
 
 // You are given two numbers 'A' and 'B' in the form of 
 // two arrays (A[] and B[]) of lengths 'N' and 'M' respectively, 
@@ -758,6 +764,7 @@
 
 // let arr1= [4, 5, 1];
 // let arr2 = [3, 4, 5]
+
 // function sumoftwoArr(arr1,arr2,n,m) {
 //     let i =n-1,j=m-1;
 //     let newArr = [], carry = 0;
@@ -801,7 +808,7 @@
 
 
 
-
+// =================== Sum Of Arr Pair ======================
 // // sorted sum Pair
 // let arr = [1,2,3,4,5];
 // let N=5;
@@ -832,7 +839,7 @@
 
 
 
-// Reverse Array from point m,
+// ================== Reverse Array from point m =========================
 // function ReverseArray(arr,m) {
 //     let i=m+1;
 //     let j = arr.length - 1;
@@ -848,8 +855,7 @@
 
 
 
-// Count Prime Number
-
+// ================== Count Prime Number ==============================
 // function countPrimes(n) {
 //     let count = 0;
 //     if (n <= 2) return 0;
@@ -873,7 +879,7 @@
 
 
 
-
+// ================== countPrimes ======================
 // function countPrimes(n) {
 //     if (n <= 2) return 0;
 
@@ -900,6 +906,7 @@
 
 
 
+// ======================== Second Largest Num =================================
 
 // Given an array of positive integers arr[] of size n, the task is to find second largest distinct element in the array.
 // Note: If the second largest element does not exist, return -1.
@@ -950,7 +957,7 @@
 // function SecondLargestNum(arr) {
 //   let largestNum;
 //   let newarr = arr.sort((a,b)=>a-b);
-//   console.log(newarr);
+//   console.log(newarr[arr.length-2]);
     
 // }
 // const arr = [102, 135, 221, 10, 34, 1];
@@ -1015,8 +1022,10 @@
 
 
 
-// pair sum 
-// Given an array arr[] of integers and another integer target. Determine if there exist two distinct indices such that the sum of their elements is equal to the target.
+// =============== pair sum ================================
+
+// Given an array arr[] of integers and another integer target. Determine if there exist two 
+// distinct indices such that the sum of their elements is equal to the target.
 
 // Examples:
 
@@ -1030,33 +1039,55 @@
 // Explanation: No pair is possible as only one element is present in arr[]
 
 
-function Pairsum(arr,target) {
-    if (arr.length===1) {
-        return false
-    }
-    let seen ={};
-    for (const elem of arr) {
-        let complement = target - (elem);
-        if(seen[complement]){
-            return true;
-        }
-        seen[elem]=true;
-    }
-    return false;
+// function Pairsum(arr,target) {
+//     if (arr.length===1) {
+//         return false
+//     }
+//     let seen ={};
+//     for (const elem of arr) {
+//         let complement = target - (elem);
+//         if(seen[complement]){
+//             return true;
+//         }
+//         seen[elem]=true;
+//     }
+//     return false;
+// //--------------------------------------------------
+//     // for (let i = 0; i < arr.length; i++) {
+//     //     for (let j = i + 1; j < arr.length; j++) {
+//     //         if(arr[i] + arr[j] === target){
+//     //             return true;
+//     //         }
+//     //     }
+//     // }
+//     // return false;
+// }
+
+// // let arr = [0, -1, 2, -3, 1], target = -2;
+// // let arr= [11], target = 11;
+// let arr = [1, -2, 1, 0, 5], target = 0;
+// console.log(Pairsum(arr,target));
 
 
-    // for (let i = 0; i < arr.length; i++) {
-    //     for (let j = i + 1; j < arr.length; j++) {
-    //         if(arr[i] + arr[j] === target){
-    //             return true;
-    //         }
-    //     }
-    // }
-    // return false;
-}
 
-// let arr = [0, -1, 2, -3, 1], target = -2;
-// let arr= [11], target = 11;
-let arr = [1, -2, 1, 0, 5], target = 0;
 
-console.log(Pairsum(arr,target));
+
+// say digit 
+// let num = 4218
+// output: ['four','two','one','eight']
+
+// function saydigit(num) {
+//     let arr = ["zero","one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+//     newArr = [];
+//     while (num > 0) {
+//         let digit = num % 10;               // get last digit
+//         newArr.push(arr[digit]);            // push its word
+//         num = Math.floor(num / 10);         // remove last digit
+//         console.log(num);
+        
+//     }
+//     newArr.reverse();
+//     return newArr;
+// }
+// let num = 4218
+// console.log(saydigit(num));

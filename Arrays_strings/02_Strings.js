@@ -1,28 +1,32 @@
-// string data type
+//=============== Questions of String DSA =====================
 
 // check palindrome;
 // let str = "madamwqe";
 // let rev =""
 
-/*
-for (let i = str.length-1; i >= 0; i--)  rev+=str[i];
-if (str === rev)  console.log("this is a plaindrome");
-else console.log("this is not a plaindrome");
-*/
+// way 1
+// for (let i = str.length-1; i >= 0; i--)  rev+=str[i];
+// if (str === rev){
+//      console.log("this is a plaindrome")
+// }else {
+//     console.log("this is not a plaindrome")
+// }
 
+// way 2
 // more effficient way
+// let isplaindrom=true;
+// for (let i = 0,j = str.length-1; i<j; i++,j--) { 
+//     if(str[i]!=str[j]){
+//         isplaindrom=false;
+//         break;
+//     }
+// }
+// if (isplaindrom){
+//      console.log("this is a plaindrome")
+// }else {
+//     console.log("this is not a plaindrome")
+// }
 
-/*
-let isplaindrom=true;
-for (let i = 0,j = str.length-1; i<j; i++,j--) { 
-    if(str[i]!=str[j]){
-        isplaindrom=false;
-        break;
-    }
-}
-if (isplaindrom)  console.log("this is a plaindrome");
-else console.log("this is not a plaindrome");
-*/
 
 
 // logic pic one character from both side and complere
@@ -36,7 +40,7 @@ else console.log("this is not a plaindrome");
 // str[i];
 
 
-// Count vowels and consonants in a string.
+// ============ Count vowels and consonants in a string. ====================
 
 // let str = "i love my india mex"
 // let arr = ["a","e","i","o","u"];
@@ -64,7 +68,7 @@ else console.log("this is not a plaindrome");
 // Input: s = "anagram", t = "nagaram"
 
 
-// Check if two strings are anagrams of each other.
+// ================= Check if two strings are anagrams of each other. ====================
 // let str1 = "anagramlo";
 // let str2 = "nagaramlo";
 
@@ -77,7 +81,7 @@ else console.log("this is not a plaindrome");
 // else console.log("is Not Anagram word");
 
 
-
+// =============== Check anagram  ===========================
 // let s1 = "anagramlo";
 // let s2 = "nagaramlo";
 // function isAnagram(s1,s2){
@@ -103,7 +107,7 @@ else console.log("this is not a plaindrome");
 
 
 
-// Convert the first letter of each word to uppercase.
+// =============== Convert the first letter of each word to uppercase. =============================
 
 // let str = "i love my india max"
 // let uppercaseChar=[]
@@ -129,7 +133,7 @@ else console.log("this is not a plaindrome");
 
 
 
-// // check palindorme
+// ================== check palindorme ===============================
 // function ispalindorme(str){
 //     for (let i = 0,j=str.length - 1; i<j; i++,j--) {
 //         if(str[i]!== str[j]){
@@ -146,7 +150,7 @@ else console.log("this is not a plaindrome");
 // else console.log("this is not a plaindrome");
 
 
-// Reverse a string without using built-in reverse().
+// =============== Reverse a string without using built-in reverse(). ====================
 
 // let str = "shehbaz I love my india";
 // let rev = "";
@@ -194,7 +198,7 @@ else console.log("this is not a plaindrome");
 
 
 
-// // check anagram;
+// =================== check anagram ========================
 // let s1 = "anagramlo";
 // let s2 = "nagaramlo";
 
@@ -223,7 +227,7 @@ else console.log("this is not a plaindrome");
 // }
 
 
-// // Find the first non-repeating character in a string.
+//============= Find the first non-repeating character in a string. =========================
 
 // let s1 = "annagramlo";
 // let firstNonRep = ""
@@ -260,6 +264,7 @@ else console.log("this is not a plaindrome");
 // // Output: "  Shehbaz   India "
 
 
+// ================== Each Word Upper Case ====================
 // function eachWordUppercase(str) {
 //     let result = "";
 //     let newWord = true;  // Flag to detect start of a word
@@ -289,7 +294,7 @@ else console.log("this is not a plaindrome");
 
 
 
-// write a fuction return string into alphabatical order.
+// ================= write a fuction return string into alphabatical order. ========================
 // let str = "apple";
 //Output: aepple
 // function alphabaticalOrderStr(str){
@@ -324,7 +329,7 @@ else console.log("this is not a plaindrome");
 // console.log(alphabaticalOrderStr(str));
 
 
-// Convert the first letter of each word to uppercase.
+// ================== Convert the first letter of each word to uppercase. ======================
 // let str = "i love my india"
 // function eachWordUppercase(str) {
 //     let newWord =true;
@@ -352,13 +357,12 @@ else console.log("this is not a plaindrome");
 
 
 
-// A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+// A phrase is a palindrome if, after converting all uppercase letters into lowercase letters 
+// and removing all non-alphanumeric characters, it reads the same forward and backward. 
+// Alphanumeric characters include letters and numbers.
 
 // Given a string s, return true if it is a palindrome, or false otherwise.
-
-
 // Example 1:
-
 // Input: s = "A man, a plan, a canal: Panama"
 // Output: true
 // Explanation: "amanaplanacanalpanama" is a palindrome.
@@ -381,7 +385,7 @@ else console.log("this is not a plaindrome");
 // s consists only of printable ASCII characters.
 
 
-
+// ================ check Palindrome ====================
 // function checkPalindrome(s) {
 //   let str = s.toLowerCase().replace(/[^a-z0-9]/g, '');
 //   let i = 0, j = str.length - 1;
@@ -400,38 +404,7 @@ else console.log("this is not a plaindrome");
 // console.log(checkPalindrome(" ")); // true
 
 
-// let arr = [1,0,1,1,1,0,0,0,1]
-// function largestcontigusOnes(arr) {
-//     let i=0,j=arr.length;
-//     let maxcount1 = 0;
-//     let count = 0;
-//     // while (i<j) {
-//     //     if (arr[i] === 1) {
-//     //         count++;
-//     //         maxcount1 = Math.max(maxcount1,count);
-//     //     } else{
-//     //         count=0
-//     //     }  
-//     //     i++;
-//     // }
-
-//     for (const element of arr) {
-//         if (element===1) {
-//             count++;
-//             maxcount1 = Math.max(maxcount1,count);
-//         }
-//         else count = 0;
-//     }
-//     return maxcount1;
-// }
-// console.log(largestcontigusOnes(arr));
-
-
-
-
-
-
-
+// ================ check Palindrome ====================
 // function checkPalindrome(s) {
 //   let str = s.toLowerCase().replace(/[^a-z0-9]/g, '');
 //   let i = 0, j = str.length - 1;
@@ -454,7 +427,7 @@ else console.log("this is not a plaindrome");
 // console.log(checkPalindrome(s)); 
 
 
-
+// ============== space Replace with "@40" ======================
 // let str = "i love my india"
 // function spacereplace(str) {
 //     // str = str.split(" ").join("@40");
@@ -472,7 +445,7 @@ else console.log("this is not a plaindrome");
 // console.log(spacereplace(str));
 
 
-// 1910. Remove All Occurrences of a Substring
+//===============  1910. Remove All Occurrences of a Substring   =======================
 
 // let s = "daabcbaabcbc", part = "abc";
 // // Output: "dab"
@@ -489,7 +462,8 @@ else console.log("this is not a plaindrome");
 
 
 
-// Q 567. Permutation in String
+// =============== Q 567. Permutation in String  ===================
+
 // Hint
 // Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
 // In other words, return true if one of s1's permutations is the substring of s2.
@@ -566,25 +540,7 @@ else console.log("this is not a plaindrome");
 
 
 
-
-
-// let arr= [10,1,7,14,9];
-
-// function bubblesort(arr) {
-//   let n =arr.length;
-//   for (let i = 0; i < n -1; i++) {
-//     for (let j = 0; j < n -i -1; j++) {
-//       if(arr[j] < arr[j+1]);
-//       [arr[j],arr[j+1]] = [arr[j+1],arr[j]];
-//     }
-//   }
-//   return arr;
-// }
-// console.log(bubblesort(arr));
-
-
-
-// 1047. Remove All Adjacent Duplicates In String
+//============== 1047. Remove All Adjacent Duplicates In String ===================
 
 // let s = "abbaca"
 // Output: "ca"
@@ -606,124 +562,6 @@ else console.log("this is not a plaindrome");
 // };
 // let s = "abbaca"
 // console.log(removeDuplicates(s));
-
-
-
-
-
-// function compressArrayStr(chars) {
-//     let charCount = {};
-//     for (const element of chars) {
-//         console.log(element);
-//         charCount[element] = (charCount[element] || 0) + 1
-//         if (charCount[element]===1) {
-            
-//         }
-//     }
-//     console.log(charCount);
-//     let flatedresult = Object.entries(charCount).flat(Infinity);
-//     for (let i = 0; i < flatedresult.length; i++) {
-//         if (flatedresult[i]===1) {
-//             flatedresult.splice(flatedresult[i],1);
-//         }
-//         if (flatedresult[i]>10) {
-//             let numberstr =  toString(flatedresult[i]);
-//             console.log(numberstr.split(""));
-            
-//         }
-//     }
-//     console.log(flatedresult);
-    
-//     return charCount;  
-// }
-
-// let chars = ['a','b','b','c','c','c','d','d','d','d','d','d','d','d','d','d','d','d','d','d'];
-// console.log(compressArrayStr(chars) );
-
-
-
-
-// function compress(chars) {
-//     let i = 0;
-//     let ansIndex = 0;
-//     const n = chars.length;
-
-//     while (i < n) {
-//         let j = i + 1;
-
-//         // move j while chars[i] == chars[j]
-//         while (j < n && chars[i] === chars[j]) {
-//             j++;
-//         }
-
-//         // store old character
-//         chars[ansIndex++] = chars[i];
-
-//         // count of same characters
-//         let count = j - i;
-
-//         // if count > 1, convert count to string and store its digits
-//         if (count > 1) {
-//             const cntStr = count.toString();
-//             for (const ch of cntStr) {
-//                 chars[ansIndex++] = ch;
-//             }
-//         }
-
-//         // move i to j (next new character)
-//         i = j;
-//     }
-
-//     // return new compressed length
-//     return ansIndex;
-// }
-
-// // ✅ Example 1
-// let chars1 = ["a","b","b","b","b","b","b","b","b","b","b","b","b"];
-// const len1 = compress(chars1);
-// console.log("Returned length:", len1);
-// console.log("Compressed array:", chars1.slice(0, len1)); // ["a","b","1","2"]
-
-// // ✅ Example 2
-// let chars2 = ["a","a","b","b","c","c","c"];
-// const len2 = compress(chars2);
-// console.log("Returned length:", len2);
-// console.log("Compressed array:", chars2.slice(0, len2)); // ["a","2","b","2","c","3"]
-
-
-
-// 26. Remove Duplicates from Sorted Array
-// let nums = [0,0,1,1,1,2,2,3,3,4];
-// function removeDuplicates(nums){
-//     let i=0,n=nums.length,k=0;
-//     while (i<n) {
-//         let j=i+1;
-//         while (j<n && nums[i]===nums[j]) {
-//             j++;
-//         }
-//         // store
-//         nums[k++] = nums[i]
-//         i=j
-//     }
-//     return k;
-// }
-// console.log(removeDuplicates(nums));
-
-
-
-// function  RemoveElement(nums,val) {
-//     let i=0,k=0,n=nums.length;
-//     while (i<n) {
-//         if(nums[i]!==val){
-//             nums[k++] = nums[i];
-//         }
-//         i++;
-//     }
-//     return k;
-// }
-// let arr = [0,1,2,2,3,0,4,2];
-// let val = 2
-// console.log(RemoveElement(arr,val));
 
 
 
@@ -753,6 +591,7 @@ else console.log("this is not a plaindrome");
 
 
 
+//  ============ most frequent character =================
 
 // function mostfrequent(s) {
 //     let charCount = {};
@@ -777,6 +616,7 @@ else console.log("this is not a plaindrome");
 // console.log(mostfrequent(s2)); 
 
 
+// =============== count Substring ================
 
 // function countSubstring(str,sub) {
 //     console.log(str.slice(1));
@@ -790,7 +630,7 @@ else console.log("this is not a plaindrome");
 
 
 
-// capitilize each word
+// =========== capitilize each word ====================
 // let str = "I love my india";
 // function capitalizedword(str) {
 //    let pp = str.split(" ").map((word)=> word[0].toUpperCase() + word.slice(1) ).join(" ");
@@ -800,7 +640,7 @@ else console.log("this is not a plaindrome");
 
 
 
-// check anagram
+// =========== check anagram =====================
 
 // function checkAnagram(str1,str2) {
 //    str1 = str1.toLowerCase();
@@ -830,7 +670,8 @@ else console.log("this is not a plaindrome");
 // console.log(checkAnagram(str1,str2));
 
 
-// longest word from string
+// ========= longest word from string =============
+
 // function logwordlength(str) {
 //     let logest_word = '';
 //     let maxlen = 0
@@ -865,7 +706,6 @@ else console.log("this is not a plaindrome");
 // preserving the order of letters within each word. 
 
 // let str = "hello sir good morning";
-
 // function reverseString(str) {
 //     // let arr = str.split(" ");
 //     // let newstr = '';
@@ -902,31 +742,31 @@ else console.log("this is not a plaindrome");
 
 
 
-let str = "hello sir good morning";
-function reverseString(str) {
-    let words = []
-    let current=""
-    for (const ch of str) {
-        if(ch !== " "){
-            current +=ch
-        }else{
-            words.push(current);
-            current=""
-        }
-    }
-    // push last word 
-    if(current) words.push(current);
+// let str = "hello sir good morning";
+// function reverseString(str) {
+//     let words = []
+//     let current=""
+//     for (const ch of str) {
+//         if(ch !== " "){
+//             current +=ch
+//         }else{
+//             words.push(current);
+//             current=""
+//         }
+//     }
+//     // push last word 
+//     if(current) words.push(current);
 
-    let reversedSentence = "";
-    for (let i = words.length - 1; i >= 0 ; i--) {
-        let revWord = "";
-        for (let j = words[i].length - 1; j >= 0; j--) {
-        revWord += words[i][j];
-        }
-        reversedSentence += revWord;
-        if (i !== 0) reversedSentence += " ";
-    }
-    return reversedSentence;
-}
-console.log(reverseString(str));
+//     let reversedSentence = "";
+//     for (let i = words.length - 1; i >= 0 ; i--) {
+//         let revWord = "";
+//         for (let j = words[i].length - 1; j >= 0; j--) {
+//         revWord += words[i][j];
+//         }
+//         reversedSentence += revWord;
+//         if (i !== 0) reversedSentence += " ";
+//     }
+//     return reversedSentence;
+// }
+// console.log(reverseString(str));
 

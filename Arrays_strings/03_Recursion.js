@@ -106,3 +106,46 @@
 // console.log(arrSum([2, 3, 1, 5, 6])); // Output: 17
 
 
+// function arrSum(arr, length) {
+//     if (length===0) return 0;   // base case
+//     if (length===1) return arr[0];   // base case
+
+//     let sum = arr[0] + arrSum(arr.slice(1), length - 1);
+//     return sum;
+// }
+
+// let arr = [2, 3, 1, 5, 6];
+// console.log(arrSum(arr,arr.length)); // Output: 17
+
+
+
+// search leanear find key element from an array.
+
+// function findkey(arr,key,index=0) {
+//     if (index === arr.length) {
+//         return -1;
+//     }
+//     if (key === arr[index]) {
+//         console.log(`found key ${arr[index]} at index ${index + 1}`);
+//         return index;
+//     }else{
+//         return findkey(arr,key,index+1)
+//     }
+// }
+
+
+function findkey(arr,key,length) {
+    if(length === 0){
+        return false;
+    } 
+    if (key === arr[0]) {
+       return true; 
+    }
+    return findkey(arr.slice(1),key,length-1)
+}
+
+let arr =[1,3,54,63,22,55,76,54,99];
+let length = arr.length;
+let key = 1000;
+console.log(findkey(arr,key,length));
+

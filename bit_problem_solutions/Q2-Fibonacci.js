@@ -83,3 +83,23 @@
 // let n = 6
 // console.log(fibonacci(n)); // 3
 
+
+
+
+// say digit 
+// output: ['four','two','one','eight']
+
+// function saydigit(num) {
+//     let arr = ["zero","one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+
+//     if(num === 0) return ;
+//     let digit = num % 10;                         
+//     num = Math.floor(num / 10);         
+    
+//     saydigit(num)
+    
+//     console.log(arr[digit]);   
+// }
+// let num = 4218
+// console.log(saydigit(num));
+
