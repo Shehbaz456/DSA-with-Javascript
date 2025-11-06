@@ -1091,3 +1091,42 @@
 // }
 // let num = 4218
 // console.log(saydigit(num));
+
+
+
+// ================== find maxium number consucation ones ===========================
+
+// let arr = [0,1,0,0,1,1,0,1,1,1,0];
+// function getMaximumOnesConsucative(arr) {
+//     let count =0, maxcount =0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if(arr[i]===1) count++; 
+//         if (arr[i]===0) count=0;
+//         if(maxcount<count) maxcount=count;
+//     }
+//     return maxcount;
+// }
+// console.log(getMaximumOnesConsucative(arr));
+
+
+// ================== pair sum ================
+// let arr = [1, -2, 1, 0, 5], target = 0;
+// function Pairsum(arr,target) {
+//     let seen ={};
+//     let pairarr = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//       let elem = target - arr[i];
+//       if(seen.hasOwnProperty(elem)){
+//         pairarr.push([elem,arr[i]])
+//       }
+//       seen[arr[i]] = true
+//     }
+//     console.log(seen);
+//     console.log(pairarr);
+    
+//     return pairarr;
+// }
+// console.log(Pairsum(arr,target));
+
+
