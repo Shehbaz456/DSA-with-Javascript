@@ -29,12 +29,15 @@
 
 
 // 🧩 3️⃣ Array → Object
-let arr = [1, 2, 3];
-typeof arr; // "object"
-console.log(Object(arr));
+// let arr = [1, 2, 3];
+// typeof arr; // "object"
+// let obj = Object(arr);
+// console.log("objects ",obj);
 
-Object.assign({}, arr); // {0:1, 1:2, 2:3}
-console.log({ ...arr });  // {0:1, 1:2, 2:3}
+// console.log(Object(arr));
+
+// Object.assign({}, arr); // {0:1, 1:2, 2:3}
+// console.log({ ...arr });  // {0:1, 1:2, 2:3}
 
 
 
@@ -53,9 +56,9 @@ console.log({ ...arr });  // {0:1, 1:2, 2:3}
 // ✅ Method-Based
 
 // only one element only convert into number
-Number([10]);      // 10
-parseInt([20]);    // 20
-parseFloat(['3.14']); // 3.14
+// Number([10]);      // 10
+// parseInt([20]);    // 20
+// parseFloat(['3.14']); // 3.14
 
 
 // let arr1 = ['22', '33', '44']; Number(arr1.join(''))  // 223344
@@ -78,18 +81,18 @@ parseFloat(['3.14']); // 3.14
 
 
 // 🧩 6️⃣ String → Object
-let str = 'hello';
-Object(str);  // String object wrapper
+// let str = 'hello';
+// Object(str);  // String object wrapper
 
-JSON.parse('{"name":"Shehbaz"}'); // { name: 'Shehbaz' }
+// JSON.parse('{"name":"Shehbaz"}'); // { name: 'Shehbaz' }
 
 
 
 // 🧩 7️⃣ Number → String
-123 + "";     // "123"
+// 123 + "";     // "123"
 
-String(123);     // "123"
-(123).toString();// "123"
+// String(123);     // "123"
+// (123).toString();// "123"
 
 
 
@@ -110,6 +113,20 @@ String(123);     // "123"
 // JSON.stringify({a:1});  // '{"a":1}'
 // String({a:1});          // "[object Object]"
 // {}.toString();          // "[object Object]"
+
+// let obj={
+//     a:1,
+//     b:2
+// }
+// console.log("obj to string",obj.toString());
+
+// let obj2 =obj
+// obj2.a=5
+// console.log("obj 2",obj2);
+// console.log("obj 1",obj);
+
+// let key = Object.keys(obj)
+
 
 
 // 🧩 11️⃣ Object → Array

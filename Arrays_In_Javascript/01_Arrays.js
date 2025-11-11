@@ -1130,3 +1130,24 @@
 // console.log(Pairsum(arr,target));
 
 
+// let num = 21012
+// function checkpalindrome(num) {
+//   if (String(num).length % 2 === 0)  return false; 
+//   let arr = String(num).split("").map(Number);
+//   let i = 0,j=arr.length - 1;
+//   while (i<j) {
+//    if(!(arr[i]===arr[j])){
+//     return false;
+//    }
+//    i++;j--;
+//   }  
+//   return true;
+// }
+
+// console.log(checkpalindrome(num));
+
+
+
+
+
+

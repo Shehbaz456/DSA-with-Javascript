@@ -282,3 +282,107 @@
 // }
 // console.log(numMaximizer(nums));
 
+
+
+
+
+// ================================================================
+
+// 268. Missing Number (Easy)
+
+// Given an array nums containing n distinct numbers in the range [0, n], 
+// return the only number in the range that is missing from the array.
+
+// Input: nums = [3,0,1]
+// Output: 2
+
+// n = 0 1 2 3
+// Explanation:
+// n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 
+// 2 is the missing number in the range since it does not appear in nums.
+
+
+// let nums =[3,0,1]
+// function get_massingNum(nums) {
+    // let sum=0,total_sum = 0;
+    // for (const elem of nums) {
+    //     sum+=elem;
+    // }
+    // for (let i = 0; i <= nums.length; i++) {
+    //        total_sum+=i;
+    // }
+    // return total_sum - sum;
+
+    // let n = nums.length;
+    // let arr = Array(n+1).fill(-1);
+    // way=1
+    // for (let i = 0; i < nums.length; i++) {
+        // for (let j = 0; j <= nums.length; j++) {
+        //    if(nums[i]===j){
+        //      arr[j] = nums[i];
+        //     }
+        // }
+    // }
+    // way=2
+    // for (let i = 0; i < nums.length; i++) {
+    // arr[nums[i]] =nums[i]
+    // }
+    // for (let j = 0; j < arr.length; j++) {
+    //     if(arr[j] === -1) return j;
+    // }
+    // return 0;
+// }
+
+// console.log( get_massingNum(nums) );
+
+
+// 66. Plus One (Easy)
+// You are given a large integer represented as an integer array digits, 
+// where each digits[i] is the ith digit of the integer. 
+// The digits are ordered from most significant to least significant in left-to-right order. 
+// The large integer does not contain any leading 0's.
+
+// Increment the large integer by one and return the resulting array of digits.
+
+// Input: digits = [1,2,3]
+// Output: [1,2,4]
+// Explanation: The array represents the integer 123.
+// Incrementing by one gives 123 + 1 = 124.
+// Thus, the result should be [1,2,4].
+
+
+
+// let digits = [1,2,3];
+
+// function incrementArraytoOne(digits) {
+//     way 1 - ETL for large number convert.
+//     let strnum="";
+//     for (let i = 0; i < digits.length; i++) {
+//        strnum += digits[i]
+//     }
+//    let num = Number(strnum);
+//    let arr = String(num+1).split("").map(Number)
+//     return arr;
+
+    // for (let i = digits.length-1; i >=0; i--) {
+    //     if(digits[i]<9){
+    //         digits[i] += 1;
+    //         return digits;
+    //     }
+    //     digits[i]=0
+    // }
+    // digits.unshift(1);  
+    // return digits;
+// }
+
+// console.log(incrementArraytoOne(digits));
+
+
+// let s = "()[]{}";
+
+// function validparantheses(s) {
+    
+// }
+// console.log(validparantheses(s));
+
+

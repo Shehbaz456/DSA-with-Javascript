@@ -768,3 +768,49 @@
 // }
 // console.log(reverseString(str));
 
+
+
+
+
+
+// check valid anagram
+
+// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+// Example 1:
+// Input: s = "anagram", t = "nagaram"
+// Output: true
+// Example 2:
+// Input: s = "rat", t = "car"
+// Output: false
+
+
+
+
+
+let s = "anagram", t = "nagaram";
+function checkAnagram(s,t) {
+    // if(s.length===t.length) return false;
+    let keepCount={};
+    // for (let i = 0; i < s.length; i++) {
+    //     console.log(s[i]);
+        
+    //     keepCount[s[i]] =  (keepCount[s[i]] || 0) + 1;
+    // }
+    for (const ch of s) {
+        keepCount[ch] =  (keepCount[ch] || 0) + 1;
+    }
+
+    for (const ch of t) {
+        if(!keepCount[ch]) return false;
+        keepCount[ch]--;
+        if (keepCount[ch] === 0) delete keepCount[ch]; 
+    }
+   
+    return Object.keys(keepCount).length === 0;; 
+}
+
+console.log(checkAnagram(s,t));
+
+
+
+

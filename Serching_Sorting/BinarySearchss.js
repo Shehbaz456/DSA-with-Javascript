@@ -1,5 +1,4 @@
-
-// function binarysearch(arr,key) {    
+// function binarysearch(arr,key) {
 //     let start = 0;
 //     let end = arr.length;
 //     while(start < end){
@@ -7,24 +6,21 @@
 //         let mid = Math.floor(start + (end - start)/2)
 //         if(arr[mid]===key){
 //             return mid;
-//         } 
+//         }
 //         if(key>arr[mid]) {
 //             start = mid +1;
 //         }else{
 //             end = mid - 1;
-//         } 
+//         }
 //     }
 //     return -1;
 // }
-
 
 // let arr=[1,29,9,10,61,16,31,4,12,1,32,76,4];
 // arr.sort((a,b)=> a-b)
 // console.log(arr);
 // let index = binarysearch(arr,32)
 // console.log(`Element ${arr[index]} found at index ${index}`);
-
-
 
 // find first and last positon in a shorted array elements.
 
@@ -34,7 +30,7 @@
 //     // let mid = (start + end)/2;
 //     let ans = -1;
 //     while (start<=end) {
-//         let mid = Math.floor(start + (end - start)/2) 
+//         let mid = Math.floor(start + (end - start)/2)
 //         if(key === arr[mid]){
 //             ans = mid
 //             end = mid - 1;
@@ -60,7 +56,7 @@
 //         }else{
 //             end = mid - 1;
 //         }
-//         mid = start + (end - start)/2 
+//         mid = start + (end - start)/2
 //     }
 //     return ans !== -1 ? `Element ${key} last found at index ${ans}` : -1;
 // }
@@ -68,7 +64,6 @@
 // let arr = [1,2,3,3,3,3,4,5];
 // console.log(firstOcc(arr,3));
 // console.log(lastOcc(arr,3));
-
 
 // function firstOcc(arr, key) {
 //   let start = 0;
@@ -124,25 +119,35 @@
 //   console.log(`Element ${key} not found`);
 // }
 
+// // Binary Search using Recursion
+// function binarySearch(arr,s,e,key) {
+//     if (s>e) {
+//         return -1;
+//     }
+//     let mid = Math.floor(s + (e-s)/2);
+
+//     if(key===arr[mid]) return mid;
+
+//     if (key>arr[mid])  return binarySearch(arr,mid+1,e,key)
+//     else  return binarySearch(arr,s,mid-1,key)
+
+// }
+// let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,15,17,18,19,20,21,44,66,77,88,99,100];
+// let s = 0;
+// let e = arr.length;
+// let key = 100;
+// console.log(binarySearch(arr,s,e,key));
 
 
-// Binary Search using Recursion
-function binarySearch(arr,s,e,key) {    
-    if (s>e) {
-        return -1;
-    }
-    let mid = Math.floor(s + (e-s)/2);
 
-    if(key===arr[mid]) return mid;
 
-    if (key>arr[mid])  return binarySearch(arr,mid+1,e,key)
-    else  return binarySearch(arr,s,mid-1,key)
-    
-}
-let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,15,17,18,19,20,21,44,66,77,88,99,100];
-let s = 0;
-let e = arr.length;
-let key = 100;
-console.log(binarySearch(arr,s,e,key));
+
+
+
+
+
+
+
+
 
 
