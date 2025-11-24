@@ -47,29 +47,60 @@
 
 
 
-const btn = document.querySelector(".Increment_btn");
-const btnPress = document.querySelector(".Increment_Press");
-const count = document.querySelector(".Increment_Count");
+// const btn = document.querySelector(".Increment_btn");
+// const btnPress = document.querySelector(".Increment_Press");
+// const count = document.querySelector(".Increment_Count");
 
-var triggerCount = 0;
-var PressCount = 0;
+// var triggerCount = 0;
+// var PressCount = 0;
 
-const myDebounce =(cb,delay)=>{
+// const myDebounce =(cb,delay)=>{
+//     let timer;
+//     return (...args)=>{
+//         clearTimeout(timer); // remove timing between less then 1000 ms. 
+//         timer = setTimeout(()=>{
+//         cb(...args);
+//     },delay)}
+// } 
+
+// const debounceCount = myDebounce((count)=>{
+//     triggerCount += 1;
+//     count.innerHTML=triggerCount;
+// },1000)
+
+// btn.addEventListener("click",()=>{
+//     btnPress.innerHTML = PressCount++;
+
+//     debounceCount(count);
+// })
+
+
+
+
+
+function debounce (fn,delay){
     let timer;
-    return (...args)=>{
-        clearTimeout(timer); // remove timing between less then 1000 ms. 
-        timer = setTimeout(()=>{
-        cb(...args);
-    },delay)}
-} 
+    return (...arg)=>{
+        clearTimeout(timer);
+       timer = setTimeout(()=>{
+        fn(...arg)
+       },delay);
+    }
+}
 
-const debounceCount = myDebounce((count)=>{
-    triggerCount += 1;
-    count.innerHTML=triggerCount;
-},1000)
 
-btn.addEventListener("click",()=>{
-    btnPress.innerHTML = PressCount++;
+function search(query){
+console.log(query);
+}
 
-    debounceCount(count);
-})
+const searchwithDebounce = debounce(search,1000);
+
+
+
+searchwithDebounce("Ha")
+searchwithDebounce("Har")
+searchwithDebounce("Hard")
+searchwithDebounce("Hard j")
+searchwithDebounce("Hard js Questions")
+
+
