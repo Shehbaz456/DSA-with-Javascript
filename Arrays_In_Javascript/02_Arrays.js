@@ -386,3 +386,124 @@
 // console.log(validparantheses(s));
 
 
+
+// // find intersection element 
+
+// let arr1 =[22,44,5,23,45];
+// let arr2 =[5,20,45,66,33,55,33,34,54];
+
+// function getInterSection(arr1,arr2) {
+//     let comarr =[];
+//     for (let i = 0; i < arr1.length; i++) {
+//         for (let j = 0; j < arr2.length; j++) {
+//             if(arr1[i]===arr2[j]){
+//             comarr.push(arr1[i])
+//         }
+//         }
+//     }
+//     return comarr;
+// }
+
+// console.log(getInterSection(arr1,arr2));
+
+
+// remove dublicat value
+
+// let arr = [1,2,3,4,5,1,2,3];
+
+// let unique = new Set(arr);
+// arr = [...unique]
+// console.log(unique);
+// console.log(arr);
+
+// function uniqueArr(arr) {
+//     let newarr = [];
+//     for (const elem of arr) {
+//         if(!(newarr.includes(elem))){
+//             newarr.push(elem);
+//         }
+//     }
+//     return newarr;
+// }
+// console.log(uniqueArr(arr));
+
+
+
+
+// check palindrome
+// let str = "madam"
+// function isPalindrome(str){
+//   str = str.toLowerCase();
+//    let i=0,j=str.length-1;
+//    while(i<j){    
+//     if(str[i]!==str[j]){
+//         return false
+//     }
+//     i++;j--
+//    }
+//    return true;
+
+//     // return str === str.split("").reverse().join("");
+
+// }
+// console.log(isPalindrome(str));
+
+// // check palindrome
+// let str = "A man, a plan, a canal: Panama"
+// function isPalindrome(str){
+//     str = str.toLowerCase().replace(/[^a-z0-9]/g, ""); 
+//     console.log(str);
+//     let i=0;j=str.length -1;
+//     while (i<j) {
+//         if(str[i]!==str[j]){
+//             return false;
+//         }
+//         i++;j--;
+//     }
+//     return true;
+// }
+// console.log(isPalindrome(str));
+// console.log(str);
+
+
+// let arr = [1,2,3,4,5,6];
+// function length(arr){
+//     count=0
+//     for (const _ of arr) {
+//         count++
+//     }
+//     return count;
+// }
+// console.log(length(arr));
+
+
+// let str = "hello"
+// function reverse(str){
+//     let revstr = ""
+//     for (let i = str.length-1; i >= 0; i--) {
+//        revstr = revstr + str[i];
+//     }
+//     return revstr;
+// }
+// console.log(reverse(str));
+
+
+// check anagram
+let str1 = "slientd";
+let str2 = "listenf";
+
+function isAnagram(str1,str2) {
+    if(str1.length !==str2.length ) return false;
+    let charobj={};
+    for (const ch of str1) {
+        charobj[ch] = (charobj[ch]||0) +1 
+    }
+    for (const ch of str2) {
+        if(!charobj[ch]) return false;
+        charobj[ch]--;
+    }
+    charobj={};
+    return true;
+}
+console.log(isAnagram(str1,str2) );
+

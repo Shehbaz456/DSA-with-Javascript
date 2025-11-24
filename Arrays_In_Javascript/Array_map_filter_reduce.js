@@ -171,15 +171,53 @@
 // ==============================================================================
 
 // find products object Linear search No, far Better indexmap
-const products = [
-  {id:101,product:"laptop",price:1200},
-  {id:102,product:"phone",price:1200},
-  {id:103,product:"desktop",price:1200},
-]
+// const products = [
+//   {id:101,product:"laptop",price:1200},
+//   {id:102,product:"phone",price:1200},
+//   {id:103,product:"desktop",price:1200},
+// ]
 
-const indexmap = products.reduce((acc,product)=>{
-  acc[product.id] = product;
-  return acc;
-},{})
+// const indexmap = products.reduce((acc,product)=>{
+//   acc[product.id] = product;
+//   return acc;
+// },{})
 
-console.log(indexmap[103]);
+// console.log(indexmap[103]);
+
+
+
+
+
+
+// claculate total marks add which have grater then 60 and add 20 grase marks to student 
+// which have less then 60 marks then add 
+ 
+// let student = [
+//   {name:"shehbaz",roleNum:22,marks:88},
+//   {name:"salman",roleNum:12,marks:69},
+//   {name:"sona",roleNum:32,marks:43},
+//   {name:"love",roleNum:23,marks:44},
+//   {name:"love",roleNum:23,marks:14},
+// ]
+
+// let totalMarksSum = student.filter((stu)=>{
+//   if(stu.marks < 60){
+//     stu.marks += 20 
+//   }
+//  return stu.marks > 60
+// }).reduce((acc,stu)=>acc+=stu.marks,0);
+// console.log(totalMarksSum);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
