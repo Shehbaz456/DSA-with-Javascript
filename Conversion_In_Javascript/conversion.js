@@ -190,3 +190,14 @@
 
 
 
+// let arr = new Array(40).fill(1);
+// console.log(arr);
+
+ 
+// const myArray = Array.from({ length: 40 }, (_, index) => index + 1);
+// console.log(myArray); // Output: [1, 2, 3, ..., 40]
+
+// let newArr = Array.from({length: 40}, () => Math.floor((Math.random() * 40)+1));
+// console.log(newArr);
+
+

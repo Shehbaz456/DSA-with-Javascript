@@ -163,9 +163,44 @@
 
 // what will be output 
 
-console.log([]==![]);   //  true
-console.log({} + {});   // [object Object][object Object]
+// console.log([]==![]);   //  true
+// console.log({} + {});   // [object Object][object Object]
 
 
+
+
+// let obj = {
+//     name:"shehbaz",
+//     display(greet) {
+//         // console.log(this.name);
+//         return `${this.name} and ${greet}`;
+//     }
+// }
+// let obj2 ={
+//     name:"salman"
+// }
+
+// console.log(obj.display.call(obj2,"good morning"));
+
+
+
+// const calc = {
+//     total : 0,
+//     add(a){
+//             this.total +=a
+//             return this;
+//         },
+//     multiply(a){
+//            this.total *= a
+//            return this;
+//         },
+//     subtract(a){
+//             this.total -= a
+//             return this;
+//     }
+// }
+
+// const result = calc.add(10).multiply(5).subtract(30).add(10);
+// console.log(result.total);
 
 

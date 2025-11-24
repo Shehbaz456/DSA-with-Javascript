@@ -1,3 +1,4 @@
+// function curring
 
 // function sum(a,b) {
 //     if(a,b) return a+b;
@@ -63,9 +64,82 @@
 
 
 
-let arr = [ {id:1,name:"shehbaz"},{id:2,name:"akib"},{id:3,name:"afroz"} ]
+// let arr = [ {id:1,name:"shehbaz"},{id:2,name:"akib"},{id:3,name:"afroz"} ]
 
-function getobj(arr){
-   return arr.filter((obj)=>obj.id>2);
+// function getobj(arr){
+//    return arr.filter((obj)=>obj.id>2);
+// }
+// console.log(getobj(arr));
+
+
+
+// function add(a){
+//    return function (b) {
+//       if(b !== undefined) return add(a+b);
+//       return a;
+//    }
+// }
+// console.log(add(2)(4)(3)());
+
+
+
+
+// const actions = {
+//   greet: () => console.log("Hi!"),
+//   bye: () => console.log("Goodbye!")
+// };
+
+// function run(action) {
+//   action();
+// }
+
+// run(actions.greet);
+// run(actions.bye);
+
+
+
+// function once(fn) {
+//   let executed = false;
+
+//   return function(...args) {
+     
+//      if (!executed) {
+//         executed = true;
+//         console.log("args: ",args);
+//       return fn(...args);
+//    }
+//   }
+// }
+// const helloOnce = once(() => console.log("Hello once!"));
+// helloOnce(); 
+// helloOnce(); 
+
+
+
+
+// Throttle (your previous example simplified)
+
+function trottling(fn,delay) {
+   let last=0;
+   return (...args)=>{
+      let now = Date.now();
+      if(now - last >= delay){
+         last=now;
+       return  fn(...args);
+      }
+   }
 }
-console.log(getobj(arr));
+
+function fun(message) {
+   console.log(message);
+   return message;
+}
+
+let myfun = trottling(fun,10); // 10 mili second
+
+console.log(myfun("love"));
+
+myfun("love js ")
+myfun("love js more ")
+myfun("love js more, i am ")
+myfun("love js more, i am genius");

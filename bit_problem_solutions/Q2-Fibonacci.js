@@ -81,7 +81,7 @@
 // }
 
 // let n = 6
-// console.log(fibonacci(n)); // 3
+// console.log(fibonacci(n)); // [ 0, 1, 1, 2, 3, 5 ]
 
 
 

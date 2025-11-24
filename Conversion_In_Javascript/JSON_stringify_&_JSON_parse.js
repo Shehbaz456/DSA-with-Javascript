@@ -125,3 +125,14 @@
 
 
 
+// const user = { name: "Shehbaz", age: 23, skills: ["JS", "Node", "React"] };
+// let startObj = JSON.stringify(user);
+// localStorage.setItem("userconfig",startObj);
+// let data = JSON.parse(localStorage.getItem("userconfig"));
+// console.log(startObj);
+
+// console.log(data.name);
+// // console.log(JSON.parse(localStorage.getItem("userconfig.name")));
+
+// console.log(typeof startObj);
+ 
