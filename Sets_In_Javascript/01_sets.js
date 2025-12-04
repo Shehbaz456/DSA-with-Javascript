@@ -13,3 +13,18 @@ console.log("Convet Array to set : ",set);
 // set.clear(); // remove from memory
 
  
+
+function findDuplicates(arr) {
+  let set = new Set();
+  const duplicates = [];
+  for (const elem of arr) {
+    if(set.has(elem)) duplicates.push(elem);
+    else{
+      set.add(elem);
+    }
+  }
+  return duplicates;
+}
+console.log(findDuplicates([1,2,3,2,4,5,3]));
+
+

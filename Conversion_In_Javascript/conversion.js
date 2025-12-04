@@ -199,5 +199,7 @@
 
 // let newArr = Array.from({length: 40}, () => Math.floor((Math.random() * 40)+1));
 // console.log(newArr);
+// let newArr = Array.from({length: 40});
+// console.log(newArr);
 
 

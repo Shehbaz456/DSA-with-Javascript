@@ -19,9 +19,9 @@
 // } 
 
 
-let arr = [1,2,3];
-arr[4]=5;
-console.log(arr);
-console.log(arr.length);
-let [a , b] = [10,"hii"];
-console.log(a,b); 
+// let arr = [1,2,3];
+// arr[4]=5;
+// console.log(arr);
+// console.log(arr.length);
+// let [a , b] = [10,"hii"];
+// console.log(a,b); 

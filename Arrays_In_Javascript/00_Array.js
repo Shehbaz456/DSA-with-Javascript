@@ -66,15 +66,3 @@
 // let arr = [1, 2, 3, 4, 5];
 // let newarr = arr.map((num)=>num*2).filter((num)=> num % 2 === 0 )
 // console.log(newarr);
-
-const users = [
-  { id: 1, name: "Aarav", age: 25, city: "Delhi" },
-  { id: 2, name: "Riya", age: 19, city: "Mumbai" },
-  { id: 3, name: "Kabir", age: 30, city: "Delhi" },
-  { id: 4, name: "Sara", age: 22, city: "Kolkata" },
-];
-
-
-const user3 = users.find(u => u.id === 3);
-console.log(user3);
-
