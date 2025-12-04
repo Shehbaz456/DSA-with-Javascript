@@ -31,28 +31,53 @@
 
 
 
-const throtling = (cb,delay) =>{
-    let last;
-    return (...args)=>{
-        console.log("log",args);
-        let now = Date.now();
-        if(now - last < delay) return;
-        last = now;
-        return cb(...args);
-    }
-}
+// const throtling = (cb,delay) =>{
+//     let last;
+//     return (...args)=>{
+//         console.log("log",args);
+//         let now = Date.now();
+//         if(now - last < delay) return;
+//         last = now;
+//         return cb(...args);
+//     }
+// }
 
 
-function SendChatMessage(message) {
-    console.log(message);   
-}
+// function SendChatMessage(message) {
+//     console.log(message);   
+// }
 
-const slowChatModeThrotling = throtling(SendChatMessage,2*10)
+// const slowChatModeThrotling = throtling(SendChatMessage,2*10)
 
 
-slowChatModeThrotling("hi")
-slowChatModeThrotling("hi love ")
-slowChatModeThrotling("hi love me ")
-slowChatModeThrotling("hi love me you")
+// slowChatModeThrotling("hi")
+// slowChatModeThrotling("hi love ")
+// slowChatModeThrotling("hi love me ")
+// slowChatModeThrotling("hi love me you")
+
+
+
+
+// function MyThrottle(fn,delay) {
+//     let last;
+//     return (...arg)=>{
+//         let now = Date.now();
+//         if(now - last < delay ) return;
+//         last=now;
+//         return fn(...arg)
+//     }
+// }
+
+// function search(message) {
+//     console.log(message);
+    
+//     return message
+// }
+
+// let throttalIns = MyThrottle(search,1000) 
+
+// throttalIns("this is")
+// throttalIns("this is me ")
+// throttalIns("this is me love");
 
 

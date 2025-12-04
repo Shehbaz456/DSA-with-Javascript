@@ -78,29 +78,52 @@
 
 
 
-function debounce (fn,delay){
-    let timer;
-    return (...arg)=>{
-        clearTimeout(timer);
-       timer = setTimeout(()=>{
-        fn(...arg)
-       },delay);
-    }
-}
+// function debounce (fn,delay){
+//     let timer;
+//     return (...arg)=>{
+//         clearTimeout(timer);
+//        timer = setTimeout(()=>{
+//         fn(...arg)
+//        },delay);
+//     }
+// }
 
 
-function search(query){
-console.log(query);
-}
+// function search(query){
+// console.log(query);
+// }
 
-const searchwithDebounce = debounce(search,1000);
-
-
-
-searchwithDebounce("Ha")
-searchwithDebounce("Har")
-searchwithDebounce("Hard")
-searchwithDebounce("Hard j")
-searchwithDebounce("Hard js Questions")
+// const searchwithDebounce = debounce(search,1000);
 
 
+
+// searchwithDebounce("Ha")
+// searchwithDebounce("Har")
+// searchwithDebounce("Hard")
+// searchwithDebounce("Hard j")
+// searchwithDebounce("Hard js Questions")
+
+
+
+
+
+// function mydebounce(fn,delay) {
+//     let timer;
+//     return (...arg)=>{
+//         clearTimeout(timer);
+//         timer = setTimeout(()=>{
+//            return fn(...arg);
+//         },delay)
+//     }   
+// }
+
+// function search(message) {
+//     console.log(message);
+//     return message;
+// }
+
+// let debounceInst = mydebounce(search,2000);
+// // console.log(debounceInst("love"));
+// debounceInst("love li")
+// debounceInst("love sona")
+// debounceInst("love mona")

@@ -4,9 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            position: fixed;
+            background-color: violet;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px; 
+            padding: 20px;
+            width: 100%;
+        }
+        .navbar ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        .navbar ul li{
+            list-style: none;
+        }
+
+        .parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }   
+        .center{
+            background: #bd3c3c;
+        }
+        .center2{
+            background: #bd3c3c;
+            /* display: block; */
+            /* height: 20%; */
+            /* position: ; */
+            border: 2px solid springgreen ;
+        }
+        .moveh1{
+            /* padding: 20px; */
+            /* background-color: rgb(120, 94, 98); */
+            /* overflow: hidden; */
+            /* position: relative; 
+            left: 10%;
+            right: 17%;
+            bottom: 40%;   */
+        }
+    </style>
 </head>
 <body>
-    <h1>Objets</h1>
-    <script src="./02_objects.js"></script>
+    <!-- <script src="./02_objects.js"></script> -->
+     <nav class="navbar">
+        <h3>Navbar</h3>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>section</li>
+        </ul>
+     </nav>
+     <div class="center2">
+        <h1>log</h1>
+        <h1 class="moveh1">
+            Love to See
+             <p>love</p>
+        </h1>
+     </div>
+
+     <div class="parent">
+         <div class="center">
+             <h1>Objets</h1>
+          </div>
+     </div>
+     <script src="./02_Api_Call_Promise.js"></script>
 </body>
 </html>
