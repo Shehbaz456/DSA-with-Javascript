@@ -1150,4 +1150,261 @@
 
 
 
+// let arr = [10,20,3,5,6,20];
+// function maximumProduct(arr) {
+
+    // let num1=0,num2=0,num3=0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     if(arr[i]>num1){
+    //         console.log("i",arr[i]);
+    //         num1 = arr[i];
+    //     } 
+    // }
+    // for (let i = 0; i < arr.length; i++) {
+    //     if(arr[i]<num1 && arr[i]>num2){
+    //         console.log("num2 i ",arr[i]);
+    //         num2 = arr[i];
+    //     }
+    // }
+    // for (let i = 0; i < arr.length; i++) {
+    //     if(arr[i]<num2 && arr[i]>num3){
+    //         num3 = arr[i];
+    //         console.log("num2 i",arr[i]);
+    //     }
+    // }
+    // console.log(`num1 = ${num1} ,num2 = ${num2} num3 = ${num3}  `);
+    // return num1*num2*num3;
+
+
+    // console.log("array old : ",arr);
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = 0; j < arr.length; j++) {
+    //         if(arr[j]<arr[j+1]){
+    //             [arr[j],arr[j+1]] = [arr[j+1],arr[j]];
+    //         }
+    //     }
+    // }
+    // console.log("array new : ",arr);
+    // return arr[0]*arr[1]*arr[2];
+
+    // if(arr.length < 2) return false;
+    // let max1 =-Infinity
+    // let max2 =-Infinity
+    // let max3 =-Infinity
+
+    // let min1=Infinity
+    // let min2=Infinity
+
+    // for (const num of arr) {
+    //     if(num>=max1){
+    //         max3 = max2
+    //         max2 = max1
+    //         max1 = num
+    //     }
+    //     else if(num>=max2){
+    //         max1 = max2
+    //         max2 = num;
+    //     }else if(num>=max3){
+    //         max3 = num;
+    //     }
+    // }
+    // return max1*max2*max3;
+
+
+
+//     if (arr.length < 3) return false;
+
+//    let max1 = -Infinity, max2 = -Infinity, max3 = -Infinity;
+//    let min1 = Infinity, min2 = Infinity;
+
+//   for (const num of arr) {
+
+//     // Track largest three
+//     if (num > max1) {
+//       max3 = max2;
+//       max2 = max1;
+//       max1 = num;
+//     } else if (num > max2) {
+//       max3 = max2;
+//       max2 = num;
+//     } else if (num > max3) {
+//       max3 = num;
+//     }
+
+//     // Track smallest two
+//     if (num < min1) {
+//       min2 = min1;
+//       min1 = num;
+//     } else if (num < min2) {
+//       min2 = num;
+//     }
+//   }
+
+//   const option1 = max1 * max2 * max3;
+//   const option2 = max1 * min1 * min2;
+
+//   return Math.max(option1, option2);
+// }
+// console.log(maximumProduct(arr));
+
+
+
+
+// // move all zero to End.
+// let arr = [1, 2, 0, 4, 3, 0, 5, 0];
+// function moveZeroToEnd(arr) {
+//     // let n = arr.length;
+//     // let newArr = new Array(n);
+//     // for (let i = 0; i < n; i++) {
+//     //    if(arr[i]!==0){
+//     //     newArr.push(arr[i]);
+//     //    }
+//     // }
+//     // for (let i = newArr.length; i < n; i++) {
+//     //     newArr.push(0);
+//     // }    
+//     // arr = [...newArr];
+
+//     let count=0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if(arr[i]!==0){
+//             arr[count++] = arr[i];
+//         }
+//     }
+//     while (count<arr.length) {
+//         arr[count++] = 0;
+//     }
+//     return arr;
+// }
+
+// console.log(moveZeroToEnd(arr));
+
+
+
+
+// let arr = [1,2,9];
+
+// function addNumberplusOne(arr) {
+    // let strnum = "";
+    // for (const num of arr) {
+    //     strnum += num
+    // }
+    // console.log("num is",strnum);
+    // let numberadd1 = Number(strnum);
+
+    // console.log("number add is",numberadd1+9);
+    // return strnum
+
+    // for (let i = arr.length-1; i >=0; i--) {
+    //    if(arr[i]<9){
+    //     arr[i]++;
+    //     return arr;
+    //    }
+    //    arr[i]=0;
+    // }
+    // arr.unshift(1);
+
+
+    // let carry = 1;
+    // for (let i = arr.length - 1; i >= 0; i--) {
+    //     let sum = arr[i] + carry;
+    //     arr[i] = sum % 10;
+    //     carry = Math.floor(sum / 10);
+    // }
+    // if (carry > 0) {
+    //     arr.unshift(carry);
+    // }
+
+
+    // let carry=1
+    // for (let i = arr.length - 1; i >= 0; i--) {
+    //     let sum = arr[i] + carry;
+    //     arr[i] = sum % 10;
+    //     carry = Math.floor(sum / 10);
+    // }
+    // if(carry > 0)  arr.unshift(1);
+
+    // return arr;
+
+// }
+// let result = addNumberplusOne(arr);
+// console.log("result",result);
+// console.log("result join ",result.join(""));
+// console.log("result join type ", typeof result.join(""));
+
+// console.log(addNumberplusOne(arr) );
+
+
+
+
+// function maxProfit(prices) {
+//     let n = prices.length;
+//     let res=0;
+//     for (let i = 0; i < prices.length - 1; i++) {
+//         for (let j = i+1; j < prices.length; j++) {
+//             res = Math.max(res,prices[j] - prices[i])
+//         }
+//     }
+//     return res;
+// }
+
+// let prices = [7, 10, 1, 3, 6, 9, 2];
+// console.log(maxProfit(prices));
+
+
+
+
+// let  arr = [1, 1, 2, 1, 3, 5, 1];
+// let  arr = [7];
+// let  arr = [2,13];
+// function Majorityelem(arr) {
+    // let n = arr.length;
+    // let countobj = {}
+    // for (const num of arr) {
+    //     countobj[num] = (countobj[num] || 0) + 1;
+    // }  
+    // console.log("count obj",countobj);
+    // for (const key in countobj) {
+    //     if(countobj[key] > Math.floor(n/2)){
+    //         return key;
+    //     }
+    // }
+    // return -1
+
+
+    // let n = arr.length;
+    // for (let i = 0; i < n; i++) {
+    //     let count=0;
+    //     for (let j = 0; j < n; j++) {
+    //        if(arr[i]===arr[j]){
+    //         count++;
+    //        }
+    //     }
+    //     if(count>Math.floor(n/2)){
+    //         return arr[i];
+    //     }   
+    // }
+
+
+//     let n = arr.length;
+//     let candidate = null;
+//     let count = 0;
+
+//     for (const num of arr) {
+//         if(count===0){
+//             candidate=num;
+//         }    
+//         count += (num===candidate) ? 1 : -1;
+//     }
+
+//     let freq = arr.filter(x=>x===candidate).length;
+//     console.log("freq",candidate,freq);
+    
+//     return freq > Math.floor(n/2) ? candidate : -1;
+// } 
+
+// console.log(Majorityelem(arr));
+
+
+
 

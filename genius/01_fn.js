@@ -170,10 +170,6 @@
 // let newArr = arr.myreduce((acc, curr) => acc + curr, 0);
 // console.log(newArr);
 
-
-
-
-
 // Polyfill of map
 
 // let arr =[2,3,4];
@@ -181,7 +177,7 @@
 // Array.prototype.myMap = function (cb,thisArgs) {
 //     if(typeof cb !== "function"){
 //         throw new TypeError(`${cb} not a function`);
-//     }   
+//     }
 //     let newarr = [];
 //     for (let i = 0; i < this.length; i++) {
 //         newarr.push(cb.call(thisArgs,this[i],i,this))
@@ -193,7 +189,6 @@
 //     return val * this.mul;
 // },obj);
 // console.log(newDoublevalue);
-
 
 // polyfill of filter
 // let arr =[2,3,4,5,6];
@@ -213,12 +208,10 @@
 // }
 
 // let filterArr = arr.Myfilter(function(val){
-//     console.log("val",val);    
+//     console.log("val",val);
 //     return val < this.limit;
 // },obj)
 // console.log(filterArr);
-
-
 
 // // polyfill of reduce
 // let arr = [2,3,4,5,6];
@@ -246,11 +239,76 @@
 
 
 
+// pollyfill of promise
+
+
+
+let Mypromise = new Promise((resolve, reject) => {
+  let res = fetch("https://jsonplaceholder.typicode.com/posts");
+  console.log("res pending: ", res);
+  setTimeout(() => {
+    let data = res.json();
+    console.log("set time out data : ",data.data);
+  }, 2000);
+  
+  if (res.ok) {
+    resolve("Data fetched successfully!");
+  } else {
+    reject("Error fetching data.");
+  }
+});
+
+Mypromise.then((message) => {
+  console.log(message);
+}).catch((error) => {
+    console.log(error);
+})
+.finally(() => {
+    console.log("Promise operation complete."); // Executed regardless of outcome
+});
+
+
+async function fetchPosts(){
+    try {
+        let res = await fetch("https://jsonplaceholder.typicode.com1/posts");
+        if(!res.ok){
+            throw new Error("fail to fetch posts")
+        }
+        let data = await res.json();
+        console.log(data[0]);
+        
+        
+    } catch (error) {
+        console.log("failed Post: ",error);    
+        console.log("failed get Post message:",error.message);    
+        console.log("failed get Post message:",error.stack);    
+    } 
+}
+fetchPosts();
 
 
 
 
-// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // let arr = [2, 4, 6];
 
 // let result = arr.every((val) => val % 2 === 0);
@@ -261,15 +319,10 @@
 // }
 // console.log(result);
 
-
 // let newArr = arr.forEach(element => {
 //    console.log(element*2);
 // });
 // console.log(newArr);
-
-
-
-
 
 // const array = [5, 12, 8, 130, 44];
 
@@ -282,23 +335,19 @@
 // console.log(found1);
 // console.log(found);
 
-
 // const inventory = [
 //   { name: "apples", quantity: 2 },
 //   { name: "bananas", quantity: 0 },
 //   { name: "cherries", quantity: 5 },
 // ];
 // function ischerries(fruit) {
-//     return fruit.name === "cherries";   
+//     return fruit.name === "cherries";
 // }
 // console.log(inventory.find(ischerries));
 // let rev = inventory.find(ischerries);
 // let rev2 = inventory.find((fruit)=>fruit.name==="cherries");
 // console.log(rev);
 // console.log(rev2);
-
-
-
 
 // let arr = [1,411,11,49,8];
 // function isPrime(num) {
@@ -315,9 +364,3 @@
 //     return true;
 // }
 // console.log(arr.find(isPrime)); // return 2
-
-
-
-
-
-
