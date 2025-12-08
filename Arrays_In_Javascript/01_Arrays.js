@@ -793,7 +793,7 @@
 //     while (carry !=0) {
 //       let sum=carry;
 //         carry = Math.floor(sum/10);  
-//       sum = sum%10;
+//         sum = sum%10;
 //         newArr.push(sum);
 //     }
 //     let s=0,e=newArr.length-1;

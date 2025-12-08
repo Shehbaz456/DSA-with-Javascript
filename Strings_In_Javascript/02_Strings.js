@@ -619,12 +619,14 @@
 // =============== count Substring ================
 
 // function countSubstring(str,sub) {
+//     str =str.trim();
 //     console.log(str.slice(1));
+//     console.log( str.split(sub));
     
 //     const count = str.split(sub).length - 1;
 //     return count;
 // }
-// let str = "shehbaz sho meokshooo"
+// let str = "shehbaz sho meokshooo csh  sgsh "
 // let sub = "sh"
 // console.log(countSubstring(str,sub));
 

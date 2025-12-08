@@ -51,7 +51,7 @@
 // console.log(myname);
 
 
-// what will be output
+// // what will be output
 
 // let person = {name:"shehbaz"};
 // const  member = [{...person}];
@@ -110,4 +110,18 @@
 
 
 
+
+// let obj1 = {
+//     name:"shehbaz",
+//     age:20
+// }
+
+// let obj2 = {
+//     name:"salaman",
+//     age:26
+// }
+// let obj3 = {obj1,obj2};
+
+// // let obj3 = Object.assign({}, obj1, obj2);
+// console.log(obj3);
 
